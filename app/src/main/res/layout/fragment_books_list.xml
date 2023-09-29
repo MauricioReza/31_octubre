@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181F3A"
+    tools:context=".ui.fragments.BooksListFragment">
+
+    <!-- ProgressBar para la carga -->
+    <!--   <ProgressBar
+          android:id="@+id/pbLoading"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_gravity="center"
+          android:indeterminateDrawable="@drawable/loading_anim"
+          android:indeterminateDuration="1500"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent" />
+  -->
+      <!--Guideline-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="38dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="16dp" />
+
+    <!-- EditText para buscar -->
+    <EditText
+        android:id="@+id/etSearch"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/edittext_bg"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/etSearch"
+        app:layout_constraintTop_toBottomOf="@id/glTop"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:drawableEnd="@drawable/baseline_search_24" />
+
+    <!-- RadioGroup para opciones de búsqueda -->
+    <RadioGroup
+        android:id="@+id/rgSelectionBooks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/etSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp">
+
+        <RadioButton
+            android:id="@+id/rbTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbTittle"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
+
+
+
+        <RadioButton
+            android:id="@+id/rbAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbAuthor"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+
+        <RadioButton
+            android:id="@+id/rbSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbSubject"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"/>
+    </RadioGroup>
+
+    <!-- TextView para registros encontrados -->
+    <TextView
+        android:id="@+id/tvRecordsFound"
+        android:layout_width="0dp"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        app:layout_constraintTop_toBottomOf="@id/rgSelectionBooks"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        android:layout_marginTop="16dp"
+        />
+
+    <!-- RecyclerView para la lista de libros -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGames"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintTop_toBottomOf="@+id/tvRecordsFound"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginTop="16dp"
+        tools:listitem="@layout/game_element"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

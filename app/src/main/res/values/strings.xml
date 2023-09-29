@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Biblioteca UAM Xochimilco</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo_description">Logo de Mi Aplicación</string>
+
+    <string name="toast_game_id_prefix">gameId: </string>
+
+    <string name="ubicacion_label">Ubicado en:</string>
+    <string name="coleccion_label">Colección:</string>
+
+    <string name="no_internet_message">No hay conexión a Internet. Por favor, conectate a una red y vuelva intentarlo.</string>
+    <string name="ok">OK</string>
+
+    <string name="registros_encontrados">Registros encontrados: %1$d</string>
+
+    <string name="no_se_encontraron_registros">No se encontraron registros.</string>
+    <string name="connection_success_message">Conexión exitosa.</string>
+    <string name="toast_no_connection">No pudimos conectarnos a la base de datos.</string>
+    <string name="descripci_n_de_la_imagen">Palomita, conexión exitosa.</string>
+    <string name="rbTittle">Título</string>
+    <string name="rbAuthor">Autor</string>
+    <string name="rbSubject">Materia</string>
+    <string name="etSearch">Buscar</string>
+    <string name="image_description">Toast. Conexión exitosa.</string>
+
+    <string name="ubicacion">Ubicación: </string>
+
+    //Texts of the dialog ISBD
+    <string name="dialog_title">Código de barras</string>
+    <string name="dialog_positive_button">Buscar</string>
+    <string name="Barcode">Núm.del código de barras</string>
+    <string name="incorrect_format">El formato debe iniciar con una L seguida de 6 números.</string>
+
+
+</resources>

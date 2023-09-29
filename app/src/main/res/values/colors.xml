@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="mi_rojo">#FF0000</color>
+
+    //Selected
+    <color name="selected_background_color">#FF5733</color>
+
+</resources>

@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme with customized Action Bar. -->
+    <style name="Base.Theme.VideoGamesRF" parent="Theme.Material3.DayNight">
+        <!-- Customize your light theme here. -->
+        <!-- Cambiando el colorPrimary se cambian los selected de los radio bottons-->
+        <item name="colorPrimary">#E3E3E3</item>
+
+
+    </style>
+
+
+    <!-- Default App Theme (modo oscuro activado automáticamente) -->
+    <style name="Theme.VideoGamesRF" parent="Base.Theme.VideoGamesRF" />
+</resources>
