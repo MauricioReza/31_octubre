@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#141A31"
+    android:background="#FFFFFF"
     tools:context=".ui.fragments.BookDetailFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -42,7 +42,7 @@
                         android:fontFamily="@font/ubuntu_bold"
                         android:gravity="center_horizontal"
                         android:paddingBottom="10dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="25sp"
                         tools:text="Title" />
 
@@ -55,7 +55,7 @@
                         app:riv_corner_radius="10dp"
                         tools:src="@mipmap/ic_launcher" />
                     <TextView
-                        android:id="@+id/tvUbicacion"
+                        android:id="@+id/tv_ubication"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/ubuntu"
@@ -63,7 +63,7 @@
                         android:paddingTop="15dp"
                         android:paddingRight="15dp"
                         android:paddingBottom="10dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         tools:text="Ubicación" />
                     <TextView
@@ -75,7 +75,7 @@
                         android:paddingTop="15dp"
                         android:paddingRight="15dp"
                         android:paddingBottom="10dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         tools:text="Coleccion" />
                     <TextView
@@ -87,22 +87,30 @@
                         android:paddingTop="15dp"
                         android:paddingRight="15dp"
                         android:paddingBottom="10dp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         tools:text="Description" />
                 </LinearLayout>
             </ScrollView>
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/frameLayoutProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:alpha="0.5"
+            android:background="@color/white"
+            android:visibility="visible">
 
             <ProgressBar
                 android:id="@+id/pbLoading"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_centerInParent="true"
+                android:layout_gravity="center"
                 android:indeterminateDrawable="@drawable/loading_anim"
                 android:indeterminateDuration="1500"
-                />
-
-        </RelativeLayout>
+                android:visibility="visible" />
+        </FrameLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

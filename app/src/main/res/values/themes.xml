@@ -1,9 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme with customized Action Bar. -->
-    <style name="Base.Theme.VideoGamesRF" parent="Theme.Material3.DayNight">
+    <style name="Base.Theme.VideoGamesRF" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- Cambiando el colorPrimary se cambian los selected de los radio bottons-->
-        <item name="colorPrimary">#E3E3E3</item>
+       <!--CAMBIA EL COLOR DEL BUTTON DEL DIALOG -->
+
+        <item name="colorPrimary">@color/black</item>
+        <item name="android:statusBarColor">#F9F8F4</item>
+<!--
+        <item name="bottomSheetStyle">@style/MyBottomSheetDialog</item>
+-->
+
+
+
 
 
     </style>

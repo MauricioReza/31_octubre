@@ -1,6 +1,8 @@
 package com.amaurypm.videogamesrf.data.remote.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
 data class BookDto(
@@ -14,18 +16,19 @@ data class BookDto(
     var ubicación: String? = null,
     @SerializedName("clasificación")
     var clasificación: String? = null,
-    @SerializedName("coleccion")
-    var coleccion: String? = null,
-    // @SerializedName("thumbnail")
-    // var thumbnail: String? = null,
+    @SerializedName("colección")
+    var colección: String? = null,
+    @SerializedName("thumbnail")
+    var thumbnail: String? = null,
     @SerializedName("disponibilidad")
     var disponibilidad: String? = null,
+    @SerializedName("isbn")
+    var isbn: String? = null,
     @SerializedName("materia")
     var materia: String? = null,
 
-    //SELECTED
-    @SerializedName("isSelected")
-    var isSelected: Boolean = false
+    var isFavorite: Boolean = false,
+    var showCheckBox: Boolean = false
 
 
 )

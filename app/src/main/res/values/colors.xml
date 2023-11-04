@@ -2,9 +2,27 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="mi_rojo">#FF0000</color>
+    <color name="backgroundRecyclerView">#f4f4f4</color>
 
     //Selected
     <color name="selected_background_color">#FF5733</color>
+
+    //Colores del Tab Bar menu
+    <color name="colorSelectedIcon">#226CFF</color>
+    <color name="colorSelectedTitle">#0971CE</color>
+
+    <color name="colorPurpleUam">#8846FF</color>
+    <color name="colorBackgroundButtons">#EEEDE6</color>
+
+
+    <color name="colorCountBooks">#696969</color>
+
+
+    //Status Bar
+    <color name="colorNormalStatusBar">#FFFFFFFF</color>
+    <color name="colorSelectedStatusBar">#9A000000</color>
+
+
+
 
 </resources>

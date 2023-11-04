@@ -5,47 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
-    <!--Guideline-->
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="38dp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glEnd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp" />
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="16dp" />
-    <FrameLayout
-        android:id="@+id/fragment_container"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/AddBook"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavView"
+            android:layout_width="match_parent"
+            android:background="@drawable/tabbar_bg"
+            android:layout_height="wrap_content"
+            app:itemTextColor="@color/color_selector_title"
+            app:itemIconTint="@color/color_selector_icon"
+            app:menu="@menu/bottom_nav_menu" />
+    </LinearLayout>
 
-        app:layout_constraintBottom_toBottomOf="@+id/glbutton"
-        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+    <!--
 
-        android:contentDescription="TODO" />
+        <Button
+            android:id="@+id/AddBook"
+            android:layout_width="86dp"
+            android:layout_height="80dp"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:drawableBottom="@drawable/baseline_add_circle_24"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/glbutton"
+            app:layout_constraintEnd_toEndOf="@+id/glEnd" />
+    -->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

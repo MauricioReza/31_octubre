@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Theme for Night (modo oscuro) -->
-    <style name="Base.Theme.VideoGamesRF.Night" parent="Theme.Material3.DayNight">
+    <style name="Base.Theme.VideoGamesRF.Night" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <item name="colorPrimary">#333333</item>
         <!-- Definir el estilo de la Action Bar en modo nocturno -->

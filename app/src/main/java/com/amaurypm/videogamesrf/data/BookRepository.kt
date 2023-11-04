@@ -3,6 +3,10 @@ package com.amaurypm.videogamesrf.data
 import com.amaurypm.videogamesrf.data.remote.BooksApi
 import com.amaurypm.videogamesrf.data.remote.model.BookDetailDto
 import com.amaurypm.videogamesrf.data.remote.model.BookDto
+import com.amaurypm.videogamesrf.data.remote.model.MagazineDTO
+import com.amaurypm.videogamesrf.data.remote.model.MagazinesDetailDTO
+import com.amaurypm.videogamesrf.data.remote.model.MyLibraryBooksDto
+import com.amaurypm.videogamesrf.data.remote.model.NewBooksDto
 import retrofit2.Call
 import retrofit2.Retrofit
 
@@ -19,11 +23,22 @@ class BookRepository(private val retrofit: Retrofit) {
     fun getGameDetail(id: String?): Call<BookDetailDto> =
         booksApi.getGameDetail(id)
 
-    fun getGamesApiary(): Call<List<BookDto>> =
-        booksApi.getGamesApiary()
+    fun getBooksApiary(): Call<List<BookDto>> =
+        booksApi.getBooksApiary()
 
-    fun getGameDetailApiary(id: String?): Call<BookDetailDto> =
-        booksApi.getGameDetailApiary(id)
+    fun getBookDetailApiary(id: String?): Call<BookDetailDto> =
+        booksApi.getBookDetailApiary(id)
 
+    fun getMagazinesApiary(): Call<List<MagazineDTO>> =
+        booksApi.getMagazinesApiary()
 
+    fun getMagazineDetailApiary(id: String?): Call<MagazinesDetailDTO> =
+        booksApi.getMagazineDetailApiary(id)
+
+    //funciones para los libros nuevos
+    fun getNewBooksApiary(): Call<List<NewBooksDto>> =
+        booksApi.getNewBooksApiary()
+
+    fun getNewBooksDetailApiary(id: String?): Call<MagazinesDetailDTO> =
+        booksApi.getNewBooksDetailApiary(id)
 }

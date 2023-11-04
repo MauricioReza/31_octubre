@@ -8,20 +8,25 @@
 
     <string name="ubicacion_label">Ubicado en:</string>
     <string name="coleccion_label">Colección:</string>
+    <string name="publicado_label">Publicado el:</string>
+    <string name="ISSN_label">ISSN:</string>
 
-    <string name="no_internet_message">No hay conexión a Internet. Por favor, conectate a una red y vuelva intentarlo.</string>
+    <string name="no_internet_message">No hay conexión a Internet. Por favor, conéctate a una red y vuelva intentarlo.</string>
     <string name="ok">OK</string>
 
-    <string name="registros_encontrados">Registros encontrados: %1$d</string>
+    <string name="registros_encontrados_con_filtro">%1$d resultados</string>
 
-    <string name="no_se_encontraron_registros">No se encontraron registros.</string>
-    <string name="connection_success_message">Conexión exitosa.</string>
+    <string name="no_se_encontraron_registros">No se encontraron resultados.</string>
+    <string name="connection_success_message">Conexión exitosa</string>
     <string name="toast_no_connection">No pudimos conectarnos a la base de datos.</string>
     <string name="descripci_n_de_la_imagen">Palomita, conexión exitosa.</string>
     <string name="rbTittle">Título</string>
     <string name="rbAuthor">Autor</string>
     <string name="rbSubject">Materia</string>
-    <string name="etSearch">Buscar</string>
+    <string name="hint_search_by_title">Buscar por título</string>
+    <string name="hint_search_by_author">Buscar por autor</string>
+    <string name="hint_search_by_subject">Buscar por materia</string>
+    <string name="hint_search_default">Buscar</string>
     <string name="image_description">Toast. Conexión exitosa.</string>
 
     <string name="ubicacion">Ubicación: </string>
@@ -30,7 +35,62 @@
     <string name="dialog_title">Código de barras</string>
     <string name="dialog_positive_button">Buscar</string>
     <string name="Barcode">Núm.del código de barras</string>
-    <string name="incorrect_format">El formato debe iniciar con una L seguida de 6 números.</string>
+    <string name="incorrect_format">L + 6 números.</string>
+
+
+    <string name="tab_title_1">Código de barras </string>
+    <string name="tab_title_2">Escanear</string>
+    <string name="despliega_una_lista_con_las_opcines_de_filtrado_de_la_busqueda_pueden_ser_por_autor_por_titulo_y_por_a_o_de_publicaci_n">Despliega una lista con las opcines de filtrado de la busqueda, pueden ser por autor, por titulo y por año de publicación.</string>
+    <string name="despliega_un_dialogo_modal_con_las_opciones_de_busqueda_t_tulo_autor_y_meteria">Despliega un dialogo modal con las opciones de busqueda, título, autor y meteria</string>
+    <string name="filtro_por_titulo">título.</string>
+    <string name="filtro_por_autor">autor.</string>
+    <string name="filtro_por_materia">materia.</string>
+    <string name="btn_scan">Boton para escanear un libro</string>
+    <string name="buscar">Buscar...</string>
+    <string name="nuevos_n_meros_de_revistas">Revistas nuevas</string>
+    <string name="buttton_scan">buttton Scan</string>
+    <string name="cat_logo_de_novedades">Libros nuevos</string>
+    <string name="ver_todo">Ver todo</string>
+    <string name="new_num">Nuevo número</string>
+    <string name="go_back">Volver atrás</string>
+    <string name="Content_label">Sinopsis:\n\n</string>
+    <string name="magazines_label">Revistas</string>
+    <string name="Libros_guardados">Libros guardados\n</string>
+    <string name="formato_seleccionados">%1$s libros seleccionados </string>
+    <string name="save_book">  Guardar</string>
+    <string name="disponibilidad_label">Libros disponibles:</string>
+    <string name="mi_biblioteca">Mi biblioteca</string>
+    <string name="leer_m_s_sobre_este_proyecto">Leer más sobre este proyecto.</string>
+    <string name="todos_los_filtros">Todos los filtros  </string>
+    <string name="filtros_de_busqueda">Filtros de busqueda</string>
+    <string name="connection_failed_message">No hay conexión</string>
+    <string name="t_tulo">  Título</string>
+    <string name="filters">Boton para mostrar los filtros de la busqueda\n</string>
+    <string name="show_check_boxes">Seleccionar</string>
+    <string name="libro_guardado_message">¿Ver el registro en tu biblioteca?</string>
+    <string name="ver_en_tu_biblioteca">Si</string>
+    <string name="cancelar">No</string>
+    <string name="esto_est_demasiado_tranquilo">Esto está demasiado tranquilo...</string>
+    <string name="agrega_un_libro_a_tu_biblioteca">Agrega un libro a tu biblioteca</string>
+    <string name="leer_numero">Leer número</string>
+    <string name="imagen_de_la_portada_del_libro">Imagen de la portada del libro</string>
+    <string name="escaner">Escaner</string>
+
+<!--Sheet Menu-->
+    <string name="localizar">"    Localizar"</string>
+    <string name="compartir">"    Compartir"</string>
+    <string name="guardar">"    Guardar"</string>
+    <string name="favorito">"    Favorito"</string>
+    <string name="eliminar">"    Eliminar"</string>
+
+
+    <plurals name="selected_checkboxes_singular">
+        <item quantity="one">%d libro seleccionado</item>
+    </plurals>
+
+    <plurals name="selected_checkboxes_plural">
+        <item quantity="other">%d libros seleccionados</item>
+    </plurals>
 
 
 </resources>

@@ -4,23 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#181F3A"
+    android:background="#f4f4f4"
     tools:context=".ui.fragments.BooksListFragment">
 
-    <!-- ProgressBar para la carga -->
-    <!--   <ProgressBar
-          android:id="@+id/pbLoading"
-          android:layout_width="50dp"
-          android:layout_height="50dp"
-          android:layout_gravity="center"
-          android:indeterminateDrawable="@drawable/loading_anim"
-          android:indeterminateDuration="1500"
-          app:layout_constraintTop_toTopOf="parent"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintEnd_toEndOf="parent" />
-  -->
-      <!--Guideline-->
+    <!--Guideline-->
+
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glTop"
         android:layout_width="wrap_content"
@@ -41,6 +30,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="16dp" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/glbutton"
         android:layout_width="wrap_content"
@@ -48,92 +38,283 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_end="16dp" />
 
-    <!-- EditText para buscar -->
-    <EditText
-        android:id="@+id/etSearch"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:background="@drawable/edittext_bg"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:hint="@string/etSearch"
-        app:layout_constraintTop_toBottomOf="@id/glTop"
-        app:layout_constraintEnd_toEndOf="@+id/glEnd"
-        app:layout_constraintStart_toStartOf="@+id/glStart"
-        app:layout_constraintVertical_chainStyle="packed"
-        android:drawableEnd="@drawable/baseline_search_24" />
 
-    <!-- RadioGroup para opciones de búsqueda -->
-    <RadioGroup
-        android:id="@+id/rgSelectionBooks"
-        android:layout_width="wrap_content"
+    <!-- Save-->
+    <LinearLayout
+        android:id="@+id/llSave"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/border_et_search"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/etSearch"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="24dp">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <RadioButton
-            android:id="@+id/rbTittle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rbTittle"
-            android:textColor="@color/white"
+
+        <ImageButton
+            android:id="@+id/btnBackSave"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/equisicon" />
+
+        <TextView
+            android:id="@+id/SelectedCheckBoxes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.0"/>
+            android:fontFamily="@font/hankengrotesk_semibold"
+            android:gravity="start|center_vertical"
+            android:paddingStart="16dp"
+            android:text="@string/formato_seleccionados"
+            android:textSize="20sp" />
 
+        <!-- Botón de save -->
+        <ImageButton
+            android:id="@+id/btnSave"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="save"
+            android:src="@drawable/saveicon" /> <!-- Aligns the ImageButton to the right -->
 
+    </LinearLayout>
 
-        <RadioButton
-            android:id="@+id/rbAuthor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rbAuthor"
-            android:textColor="@color/white"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"/>
-
-
-        <RadioButton
-            android:id="@+id/rbSubject"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rbSubject"
-            android:textColor="@color/white"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"/>
-    </RadioGroup>
-
-    <!-- TextView para registros encontrados -->
-    <TextView
-        android:id="@+id/tvRecordsFound"
+    <!-- EditText para buscar -->
+    <LinearLayout
+        android:id="@+id/llSearch"
         android:layout_width="0dp"
-        android:textColor="@color/white"
         android:layout_height="wrap_content"
-        android:gravity="start"
-        app:layout_constraintTop_toBottomOf="@id/rgSelectionBooks"
-        app:layout_constraintStart_toStartOf="@+id/glStart"
-        app:layout_constraintEnd_toEndOf="@+id/glEnd"
-        android:layout_marginTop="16dp"
-        />
+        android:background="@drawable/border_et_search"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <!-- RecyclerView para la lista de libros -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvGames"
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/backicon" />
+
+        <ImageButton
+            android:id="@+id/btnClear"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:enabled="true"
+            android:src="@drawable/searchicon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_bg"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/hankengrotesk_regular"
+            android:inputType="text"
+            android:paddingStart="0dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorCountBooks"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnScan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <!-- Botón de escaneo -->
+        <!--
+                <Spinner
+                    android:id="@+id/spinnerSearchBy"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@color/white"
+                    android:contentDescription="@string/buttton_scan"
+                    android:src="@drawable/baseline_more_vert_24"
+                    app:layout_constraintStart_toEndOf="@+id/etSearch"
+                    app:layout_constraintTop_toTopOf="@+id/etSearch" />
+        -->
+
+        <ImageButton
+            android:id="@+id/btnScan"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/scanicon1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintStart_toEndOf="@+id/etSearch"
+            app:layout_constraintTop_toTopOf="@+id/etSearch" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSearchOptions"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/glStart"
-        app:layout_constraintEnd_toEndOf="@+id/glEnd"
-        app:layout_constraintTop_toBottomOf="@+id/tvRecordsFound"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_marginTop="16dp"
-        tools:listitem="@layout/game_element"/>
+        android:layout_height="wrap_content"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/border_et_search"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/llSearch">
+        <!--Spinner del Search By-->
 
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_buttons_background_02">
+
+            <Spinner
+                android:id="@+id/spinnerSearchBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/filters"
+                android:fontFamily="@font/hankengrotesk_medium"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp"
+                android:spinnerMode="dialog"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/spinnericon"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorBackgroundButtons"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llShowCheckBoxes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_buttons_background_02"
+            android:contentDescription="@string/filters"
+            android:visibility="gone"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar"
+                android:fontFamily="@font/hankengrotesk_medium"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp"/>
+
+            <ImageButton
+                android:id="@+id/ibtnShowCheckBoxes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/showcheckboxesicon"
+                android:background="@drawable/custom_buttons_background_02" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llContainerBookList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#F9F8F4"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llSearchOptions">
+
+        <!-- TextView para registros encontrados -->
+        <TextView
+            android:id="@+id/tvRecordsFound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/hankengrotesk_regular"
+            android:gravity="left"
+            android:textColor="@color/colorCountBooks"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- RecyclerView para la lista de libros -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBooks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="#F9F8F4"
+            android:paddingTop="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecordsFound"
+            tools:listitem="@layout/book_element" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAllBooksFounded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F9F8F4"
+            android:paddingTop="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/book_element_second_search" />
+
+    </LinearLayout>
+    <!-- ProgressBar para la carga -->
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/loading_anim"
+        android:indeterminateDuration="1500"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

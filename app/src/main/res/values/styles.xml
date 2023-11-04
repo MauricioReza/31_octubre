@@ -6,4 +6,23 @@
         <!-- Otros atributos de estilo -->
         <item name="colorAccent">@android:color/black</item> <!-- Cambia el color aquí -->
     </style>
+
+    <style name="CustomSpinnerDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@style/CustomSpinnerDialogAnimation</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomSpinnerDialogAnimation">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+
+
+    <style name="AppTheme.BottomSheetDialog" parent="Theme.Design.BottomSheetDialog">
+        <item name="android:background">@android:color/transparent</item> <!-- Fondo del modal transparente -->
+    </style>
+
+
 </resources>
